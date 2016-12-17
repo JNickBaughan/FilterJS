@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JSFilter</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  
+  <style>
+	.remove, .clear{
+		cursor:pointer;
+	}
+	
+	.error{
+		border-style: solid;
+		border-width: 1px;
+		border-color: red;
+		background-color: #FF9966;
+	}
+  </style>
+</head>
+<body>
+  
+  <div id="filter"></div>
+  </br>
+  <select id="toggleClause">
+	<option value="0">AND</option>
+	<option value="1">OR</option>
+  </select>
+  
+  <button id="search" type="button">Search</button>
+  <button id="newQuery" type="button">Add a Query</button>
+  <button id="resetQuery" type="button">Reset Query</button>
+  
+  
+  
+  
+  <select id="toggle">
+	<option value="0">Show me 1st filter</option>
+	<option value="1">Show me 2nd filter</option>
+  </select>
+  
+   
+  
+  <script  src="./Javascripts/mustache.js"></script>
+  <script data-main="Javascripts/common" src="./Javascripts/require.js"></script>
+  <script>
+	require(["common"], function(){
+		require(['index']);
+	});
+  </script>
+  
+</body>
+</html>

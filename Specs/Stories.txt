@@ -1,0 +1,76 @@
+{
+	Filters: [
+		{ <-- this starts the object that is a parameter to filterModel-->
+			Query : { <-- this starts the object that is a parameter to queryModel-->
+				Fields : [
+					{ <!-- this starts the object that is a parameter to fieldModel-->
+						Operators : [
+							{ <!-- this starts the object that is a parameter to operatorModel-->
+								Value : {} <!--this is the object that is a parameter to valueModel-->
+							}
+						]
+					}
+				]
+			}
+		}
+		
+	]
+
+}
+
+
+
+
+when the application is opened the config object will have an array named "Filters" that
+will be used to set up the amount of different filters within JSFilter
+
+The objects within the "Filters" array will each have an property called "Query"
+
+each filter will be init with ONE query. More can added by the user later
+
+each Query object has an array named "Fields" that has config objects for each field
+
+each "Field" config object has an array named "Operators" filled with config object for each operator
+
+each "Operator" object has a "valueInput"
+
+when the application is opened the config object will read each of the "FilterModel" objects in the
+ "Filters" array and create a FilterModel for each within the JSFilter's Filter array.
+ 
+ 
+ 
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+a user can select which filter they want to use
+-filter will be index based - no id
+-when a user selects from the dropdown it will set the currentFilter variable on JSFilter
+
+each filter can have multiple queries added to it
+-current Filter is selected using currentFilter on JSFilter
+-the currentFilter should be the same as the filterConfig with in the config object, use this to send the right config to create new query
+
+the user can select if they want "AND" or "OR" linking each query
+
+for each query the user can select which field they want to search on
+-each field should have an id with index(the index of the filter they belong to) plus the name of the field
+
+once a field is selected the next dropdown appears and is populated with available operators
+- 
+
+once an operator is selected the next input appears - it can be a calendar, an input, two inputs, a dropdown
+
+once all queries are filled out the user can hit "search"
+
+

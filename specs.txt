@@ -1,0 +1,11 @@
+
+require chain:
+
+JSFilter > filterModel > queryModel > fieldModel > operatorModel > valueModel
+
+
+
+state:
+
+events: 
+

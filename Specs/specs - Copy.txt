@@ -1,0 +1,37 @@
+
+require chain:
+
+JSFilter > filterModel > queryModel > fieldModel > operatorModel > valueModel
+
+
+
+setUp:
+
+JSFilter config object contains an array of filterModels
+
+filterModel Config contains a queryModel(only one, this is duplicated each time a user adds another query)
+
+each queryModel Config contains an array of fieldModels
+
+fieldModel config contains an array of operatorModels
+
+operatorModel contains a valueInputModel
+
+
+JSFilter function takes a JSFilter Config object and the id of a DIV in the dom
+the init proccess loops through the array of filterModels and creates a new filterModel for each
+each filter Model is init with ONE query
+
+filterModel function takes a filterModel Config object and a unique index
+an id is created with the unique index e.g. filter_0, filter_1
+
+
+
+
+
+
+
+
+
+
+
