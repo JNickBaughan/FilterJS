@@ -33,6 +33,7 @@ define(['Filter', 'Query', 'jquery', 'fieldUI', 'operatorUI'], function(filterMo
 		//selector, idHeader, ignoreValue
 		var setChange = function(queryid, selector, idHeader, ignoreValue, type, element){
 			
+			
 			var elementSelector = queryid + " " + selector;
 			$( elementSelector ).change(function() {
 				
@@ -55,6 +56,7 @@ define(['Filter', 'Query', 'jquery', 'fieldUI', 'operatorUI'], function(filterMo
 		
 		
 		var setRemove = function(queryid){
+			
 			var elementSelector = queryid + "_remove";
 			$( elementSelector ).click(function(){
 				var id = this.id.substring(0, this.id.length - 7);
@@ -136,7 +138,6 @@ define(['Filter', 'Query', 'jquery', 'fieldUI', 'operatorUI'], function(filterMo
 			var queryComplete = true;
 			
 			for(var n = 0; n < count; n++){
-				
 				var queryID = filters[currentFilter].getQueryIDbyIndex(n);
 				
 				if(filters[currentFilter].isFieldSelected(n)){//is field selected
@@ -210,7 +211,7 @@ define(['Filter', 'Query', 'jquery', 'fieldUI', 'operatorUI'], function(filterMo
 		}
 		
 		
-		//these will probably change to hidden and be even driven
+		//these will probably change to hidden and be event driven
 		//todo: test that using currentFilter always give you the correct config
 		//todo: refactor this.... too long
 		this.addQuery = function(){

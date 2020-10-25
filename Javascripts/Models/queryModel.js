@@ -17,7 +17,7 @@ define(['Field'], function(fieldModel){
 		var fields = [];
 		var selectedFieldIndex = -1;
 		
-		this.isFieldSelected = function(){
+		this.isFieldSelected = function(){//todo: selectedFieldIndex is broken
 			
 			if(selectedFieldIndex > -1){
 				return true;
@@ -27,6 +27,7 @@ define(['Field'], function(fieldModel){
 		}
 		
 		this.isOperatorSelected = function(){
+			console.log(selectedFieldIndex);
 			if(selectedFieldIndex > -1){
 				return fields[selectedFieldIndex].isOperatorSelected();
 

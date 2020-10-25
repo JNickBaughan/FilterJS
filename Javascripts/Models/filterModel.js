@@ -46,12 +46,10 @@ define(['Query'], function(Query){
 		}
 		
 		var removeQuery = function(index){
-			
 			queries.splice(index, 1);
 		}
 		
 		this.removeQueryByID = function(id){
-			
 			var removeIndex = getQueryByID(id);
 			removeQuery(removeIndex);
 			
@@ -76,7 +74,7 @@ define(['Query'], function(Query){
 		
 		this.isFieldSelected = function(index){
 			
-				return queries[index].isFieldSelected();
+			return queries[index].isFieldSelected();
 			
 		}
 		
